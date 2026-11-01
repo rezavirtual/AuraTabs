@@ -1,4 +1,4 @@
-const CACHE_NAME = 'auratabs-v6';
+const CACHE_NAME = 'auratabs-v7';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();

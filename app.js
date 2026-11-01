@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v6_speed_0_to_10_scale';
+    const CURRENT_VERSION = 'v7_clean_intros_2026';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
