@@ -235,7 +235,7 @@
           <span id="scroll-state-badge" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-800 text-slate-400">
             <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span> Paused
           </span>
-          <span class="text-[11px]">Speed: <b id="speed-indicator" class="text-indigo-400">15</b> px/s</span>
+          <span class="text-[11px]">Speed: <b id="speed-indicator" class="text-indigo-400">3</b> / 10</span>
           <span id="wakelock-indicator" class="hidden sm:inline-flex items-center gap-1 text-[11px] text-emerald-400/90" title="Screen will stay awake while playing">
             <i data-lucide="sun-medium" class="w-3.5 h-3.5"></i> Screen Awake
           </span>
@@ -277,9 +277,10 @@
               <input 
                 id="speed-slider" 
                 type="range" 
-                min="2" 
-                max="60" 
-                value="15" 
+                min="0" 
+                max="10" 
+                step="1"
+                value="3" 
                 class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
               >
               <i data-lucide="rabbit" class="w-3.5 h-3.5 text-slate-500"></i>
@@ -413,8 +414,8 @@
             <input id="edit-capo" type="text" placeholder="e.g. 2nd fret" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
           </div>
           <div>
-            <label class="block text-xs text-slate-400 font-medium mb-1">Auto-Scroll Speed</label>
-            <input id="edit-speed" type="number" min="2" max="60" value="15" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+            <label class="block text-xs text-slate-400 font-medium mb-1">Auto-Scroll Speed (0-10)</label>
+            <input id="edit-speed" type="number" min="0" max="10" value="3" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
           </div>
         </div>
 
@@ -462,10 +463,10 @@
   </div>
 
   <!-- Application Scripts with Cache Buster -->
-  <script src="chords-db.js?v=5.0"></script>
-  <script src="ug-importer.js?v=5.0"></script>
-  <script src="songs-data.js?v=5.0"></script>
-  <script src="app.js?v=5.0"></script>
+  <script src="chords-db.js?v=6.0"></script>
+  <script src="ug-importer.js?v=6.0"></script>
+  <script src="songs-data.js?v=6.0"></script>
+  <script src="app.js?v=6.0"></script>
 
   <script>
     // Initialize Lucide icons

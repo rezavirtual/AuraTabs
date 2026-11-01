@@ -171,9 +171,9 @@ class AuraTabsApp {
     this.transposeSemitones = 0;
     this.fontSize = 15; // in px
 
-    // Auto-scroll variables
+    // Auto-scroll variables (Speed level from 0 to 10; max level 10 = 30 px/s)
     this.isScrolling = false;
-    this.scrollSpeed = 15; // px per second (default 25% of new 60px/s max)
+    this.scrollSpeed = 3; // default speed level (0 to 10 scale)
     this.scrollAnimId = null;
     this.lastScrollTime = null;
     this.wakeLock = null;
@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v5_speed_adjustment_2026';
+    const CURRENT_VERSION = 'v6_speed_0_to_10_scale';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
@@ -440,9 +440,9 @@ class AuraTabsApp {
       this.setScrollSpeed(parseInt(e.target.value, 10));
     });
 
-    this.btnSpeedSlow.addEventListener('click', () => this.setScrollSpeed(8));
-    this.btnSpeedMed.addEventListener('click', () => this.setScrollSpeed(15));
-    this.btnSpeedFast.addEventListener('click', () => this.setScrollSpeed(30));
+    this.btnSpeedSlow.addEventListener('click', () => this.setScrollSpeed(1));
+    this.btnSpeedMed.addEventListener('click', () => this.setScrollSpeed(3));
+    this.btnSpeedFast.addEventListener('click', () => this.setScrollSpeed(6));
 
     this.btnScrollTop.addEventListener('click', () => {
       this.stopAutoScroll();
@@ -636,7 +636,7 @@ class AuraTabsApp {
     this.currentSong = song;
     this.transposeSemitones = 0;
     this.transposeVal.textContent = '0';
-    this.scrollSpeed = (song.speed && song.speed <= 60) ? song.speed : 15;
+    this.scrollSpeed = (song.speed !== undefined && song.speed <= 10) ? song.speed : 3;
     this.speedSlider.value = this.scrollSpeed;
     this.speedIndicator.textContent = this.scrollSpeed;
 
@@ -851,8 +851,9 @@ class AuraTabsApp {
     const delta = Math.min(0.1, (currentTime - this.lastScrollTime) / 1000);
     this.lastScrollTime = currentTime;
 
-    // Calculate distance to scroll based on speed (pixels per second)
-    const pxToScroll = this.scrollSpeed * delta;
+    // Calculate distance to scroll based on speed level (0-10 scale where 10 = 30 px/s)
+    const pxPerSecond = this.scrollSpeed * 3.0;
+    const pxToScroll = pxPerSecond * delta;
     
     // Maintain fractional position to avoid iOS Safari integer rounding bug
     if (isNaN(this.currentScrollPos) || Math.abs(this.currentScrollPos - this.chordContainer.scrollTop) > 10) {
@@ -875,11 +876,11 @@ class AuraTabsApp {
   }
 
   setScrollSpeed(speed) {
-    this.scrollSpeed = speed;
-    this.speedSlider.value = speed;
-    this.speedIndicator.textContent = speed;
+    this.scrollSpeed = Math.min(10, Math.max(0, parseInt(speed, 10) || 0));
+    this.speedSlider.value = this.scrollSpeed;
+    this.speedIndicator.textContent = this.scrollSpeed;
     if (this.currentSong) {
-      this.currentSong.speed = speed;
+      this.currentSong.speed = this.scrollSpeed;
       this.saveLibrary();
     }
   }
@@ -958,7 +959,7 @@ class AuraTabsApp {
     this.editArtist.value = songToEdit ? songToEdit.artist : '';
     this.editKey.value = songToEdit ? (songToEdit.key || '') : '';
     this.editCapo.value = songToEdit ? (songToEdit.capo || '') : '';
-    this.editSpeed.value = songToEdit ? (songToEdit.speed || 15) : 15;
+    this.editSpeed.value = songToEdit ? ((songToEdit.speed !== undefined && songToEdit.speed <= 10) ? songToEdit.speed : 3) : 3;
     this.editYoutube.value = songToEdit ? (songToEdit.youtube || '') : '';
     this.editContent.value = songToEdit ? (songToEdit.content || '') : '';
 
