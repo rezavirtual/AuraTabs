@@ -1,0 +1,112 @@
+/* AuraTabs - Modern Guitar Tabs & Chords Stylesheet */
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-top {
+  padding-top: max(0.75rem, var(--safe-top));
+}
+
+.safe-bottom {
+  padding-bottom: max(0.75rem, var(--safe-bottom));
+}
+
+/* Hide scrollbars for horizontal filter bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Scrollbar for Chord Container */
+#chord-sheet-container::-webkit-scrollbar {
+  width: 6px;
+}
+#chord-sheet-container::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+#chord-sheet-container::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+#chord-sheet-container::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Chord formatting and badges */
+.chord-badge {
+  display: inline-block;
+  color: #818cf8;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background-color: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  transition: all 0.15s ease-in-out;
+  margin-right: 2px;
+}
+
+.chord-badge:hover, .chord-badge:active {
+  background-color: #6366f1;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.section-header {
+  color: #fbbf24;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(245, 158, 11, 0.12);
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comment-line {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+/* Mobile & iPad optimizations */
+@media (max-width: 640px) {
+  #chord-sheet-container {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .chord-badge {
+    padding: 2px 5px;
+    font-size: 0.95em;
+  }
+}
+
+/* Smooth line spacing for guitar tabs */
+.tab-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.65;
+}
+
+/* Glow animation for scrolling indicator */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.is-scrolling #btn-toggle-scroll {
+  background-color: #ef4444 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.45) !important;
+  animation: pulse-subtle 2s infinite ease-in-out;
+}

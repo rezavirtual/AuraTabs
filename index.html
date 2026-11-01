@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>AuraTabs - Guitar Chords & Tabs</title>
+  
+  <!-- iOS PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AuraTabs">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            amber: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+            }
+          },
+          fontFamily: {
+            mono: ['SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans select-none antialiased">
+
+  <!-- Top App Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-4 py-3 flex items-center justify-between safe-top">
+    <div class="flex items-center gap-3">
+      <button id="btn-back" class="hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors" title="Back to Library">
+        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-amber-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
+          <i data-lucide="music-2" class="w-5 h-5"></i>
+        </div>
+        <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">AuraTabs</span>
+      </div>
+    </div>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-2">
+      <button id="btn-import-ug" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-semibold transition-all">
+        <i data-lucide="download" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">Import UG Tabs</span>
+      </button>
+      <button id="btn-add-song" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition-all">
+        <i data-lucide="plus" class="w-4 h-4"></i>
+        <span>New Tab</span>
+      </button>
+      <button id="btn-theme-toggle" class="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Toggle Theme">
+        <i data-lucide="sun" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="flex-1 flex overflow-hidden relative">
+
+    <!-- VIEW 1: Library & Search View -->
+    <section id="library-view" class="w-full flex flex-col h-full overflow-y-auto px-4 py-5 max-w-5xl mx-auto space-y-5">
+      <!-- Search & Filters -->
+      <div class="space-y-3">
+        <div class="relative">
+          <i data-lucide="search" class="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search songs, artists, or chords..." 
+            class="w-full pl-11 pr-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all shadow-inner"
+          >
+          <button id="btn-clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-500 hover:text-slate-300">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+          <button class="filter-tab active px-3.5 py-1.5 rounded-full text-xs font-medium bg-indigo-600 text-white transition-all shadow-sm" data-filter="all">
+            All Songs (<span id="count-all">0</span>)
+          </button>
+          <button class="filter-tab px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 transition-all" data-filter="favorites">
+            ★ Favourites (<span id="count-favs">0</span>)
+          </button>
+          <button class="filter-tab px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 transition-all" data-filter="acoustic">
+            Acoustic
+          </button>
+          <button class="filter-tab px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 transition-all" data-filter="rock">
+            Rock
+          </button>
+          <button class="filter-tab px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 transition-all" data-filter="easy">
+            Easy Chords
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick UG Importer Banner -->
+      <div class="bg-gradient-to-r from-amber-500/10 via-amber-600/5 to-transparent border border-amber-500/20 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+        <div class="flex items-start gap-3">
+          <div class="p-2.5 rounded-lg bg-amber-500/20 text-amber-400 mt-0.5 sm:mt-0">
+            <i data-lucide="folder-down" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-200">Ultimate Guitar Favorites Sync</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Extract all tabs from your <code class="text-amber-300 bg-amber-950/40 px-1 py-0.5 rounded">mytabs</code> account and play them seamlessly here.</p>
+          </div>
+        </div>
+        <button id="btn-banner-import" class="px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-xs tracking-wide shadow-md transition-all whitespace-nowrap self-stretch sm:self-auto text-center">
+          Import Now
+        </button>
+      </div>
+
+      <!-- Songs List Grid -->
+      <div id="songs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden text-center py-16 space-y-3">
+        <div class="w-16 h-16 mx-auto rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-600">
+          <i data-lucide="music" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-base font-medium text-slate-400">No songs found</h3>
+        <p class="text-xs text-slate-500 max-w-xs mx-auto">Try a different search query or add a new tab to your collection.</p>
+      </div>
+    </section>
+
+    <!-- VIEW 2: Song Player & Chord Viewer -->
+    <section id="player-view" class="hidden w-full flex flex-col h-full relative overflow-hidden bg-slate-950">
+      
+      <!-- Song Toolbar -->
+      <div class="bg-slate-900/95 border-b border-slate-800 px-4 py-2.5 flex flex-wrap items-center justify-between gap-2 z-20">
+        <div class="flex items-center gap-3 min-w-0">
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 id="song-title" class="font-bold text-base sm:text-lg text-slate-100 truncate max-w-[200px] sm:max-w-md">Song Title</h2>
+              <button id="song-fav-btn" class="text-slate-500 hover:text-amber-400 transition-colors" title="Favorite">
+                <i data-lucide="star" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p id="song-artist" class="text-xs text-indigo-400 font-medium truncate">Artist Name</p>
+          </div>
+        </div>
+
+        <!-- Controls: Transpose, Capo, Font Size, YouTube Toggle -->
+        <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+          
+          <!-- Transpose Control -->
+          <div class="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700 text-xs">
+            <button id="btn-transpose-down" class="px-2 py-1 hover:bg-slate-700 text-slate-300 hover:text-white rounded font-bold" title="Transpose Down">-</button>
+            <span id="transpose-val" class="px-2 font-mono text-indigo-300 font-semibold select-none">0</span>
+            <button id="btn-transpose-up" class="px-2 py-1 hover:bg-slate-700 text-slate-300 hover:text-white rounded font-bold" title="Transpose Up">+</button>
+          </div>
+
+          <!-- Capo Display/Toggle -->
+          <div id="capo-badge" class="hidden sm:flex items-center gap-1 px-2.5 py-1 bg-slate-800/80 border border-slate-700 rounded-lg text-xs text-slate-300">
+            <span class="text-slate-400">Capo:</span>
+            <span id="capo-value" class="font-bold text-amber-400">None</span>
+          </div>
+
+          <!-- Font Size Adjuster -->
+          <div class="flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700 text-xs">
+            <button id="btn-font-decrease" class="px-2 py-1 hover:bg-slate-700 text-slate-300 hover:text-white rounded" title="Smaller Font">A-</button>
+            <button id="btn-font-increase" class="px-2 py-1 hover:bg-slate-700 text-slate-300 hover:text-white rounded" title="Larger Font">A+</button>
+          </div>
+
+          <!-- YouTube Drawer Toggle -->
+          <button id="btn-toggle-youtube" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-semibold transition-all">
+            <i data-lucide="youtube" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">YouTube</span>
+          </button>
+
+          <!-- Edit Tab -->
+          <button id="btn-edit-song" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors" title="Edit Tab">
+            <i data-lucide="edit-3" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Collapsible YouTube Player Container -->
+      <div id="youtube-drawer" class="hidden bg-slate-900 border-b border-slate-800 transition-all duration-300 z-10">
+        <div class="p-3 max-w-3xl mx-auto flex flex-col sm:flex-row gap-3 items-center">
+          <div id="youtube-iframe-wrapper" class="w-full sm:w-80 aspect-video bg-black rounded-lg overflow-hidden relative shadow-lg">
+            <iframe id="youtube-iframe" class="w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="flex-1 w-full space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-slate-300 flex items-center gap-1">
+                <i data-lucide="play-circle" class="w-4 h-4 text-red-500"></i> YouTube Track
+              </span>
+              <a id="youtube-external-link" href="#" target="_blank" class="text-xs text-indigo-400 hover:underline flex items-center gap-1">
+                Open in YouTube <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+            <div class="flex gap-2">
+              <input id="youtube-url-input" type="text" placeholder="Paste YouTube Video URL or ID" class="flex-1 px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+              <button id="btn-save-yt-url" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-semibold">Save</button>
+            </div>
+            <p class="text-[11px] text-slate-500">Listen along while the chords autoscroll down the screen!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auto-Scroll Progress & Status Bar -->
+      <div class="bg-slate-900/60 border-b border-slate-800/80 px-4 py-1.5 flex items-center justify-between text-xs text-slate-400">
+        <div class="flex items-center gap-3">
+          <span id="scroll-state-badge" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-800 text-slate-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span> Paused
+          </span>
+          <span class="text-[11px]">Speed: <b id="speed-indicator" class="text-indigo-400">30</b> px/s</span>
+          <span id="wakelock-indicator" class="hidden sm:inline-flex items-center gap-1 text-[11px] text-emerald-400/90" title="Screen will stay awake while playing">
+            <i data-lucide="sun-medium" class="w-3.5 h-3.5"></i> Screen Awake
+          </span>
+        </div>
+        <div class="text-[11px] font-mono text-slate-400">
+          Scroll: <span id="scroll-percentage">0%</span>
+        </div>
+      </div>
+
+      <!-- Song Content (Chord Sheet Scroll Area) -->
+      <div id="chord-sheet-container" class="flex-1 overflow-y-auto px-4 sm:px-8 py-6 max-w-4xl mx-auto w-full font-mono text-sm sm:text-base leading-relaxed tracking-wide select-text">
+        <div id="chord-sheet-content" class="space-y-4 pb-48">
+          <!-- Dynamically parsed chord lines go here -->
+        </div>
+      </div>
+
+      <!-- FLOATING AUTO-SCROLL CONTROL BAR (Fixed at bottom for easy thumb access on iPhone/iPad) -->
+      <div class="fixed bottom-0 left-0 right-0 z-30 p-3 bg-gradient-to-t from-slate-950 via-slate-900/95 to-transparent safe-bottom">
+        <div class="max-w-md mx-auto bg-slate-900/90 backdrop-blur-xl border border-slate-800/90 rounded-2xl p-2.5 shadow-2xl flex items-center justify-between gap-3">
+          
+          <!-- Big Play/Pause Button -->
+          <button id="btn-toggle-scroll" class="w-12 h-12 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center shadow-lg shadow-indigo-600/30 transition-transform active:scale-95 flex-shrink-0" title="Toggle Auto Scroll (Spacebar)">
+            <i id="scroll-icon-play" data-lucide="play" class="w-6 h-6 ml-0.5"></i>
+            <i id="scroll-icon-pause" data-lucide="pause" class="w-6 h-6 hidden"></i>
+          </button>
+
+          <!-- Speed Controls -->
+          <div class="flex-1 flex flex-col gap-1 px-1">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="font-medium text-slate-300">Scroll Speed</span>
+              <div class="flex items-center gap-2">
+                <button id="btn-speed-slow" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[10px] text-slate-300">Slow</button>
+                <button id="btn-speed-med" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[10px] text-slate-300">Normal</button>
+                <button id="btn-speed-fast" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[10px] text-slate-300">Fast</button>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="turtle" class="w-3.5 h-3.5 text-slate-500"></i>
+              <input 
+                id="speed-slider" 
+                type="range" 
+                min="5" 
+                max="120" 
+                value="30" 
+                class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500"
+              >
+              <i data-lucide="rabbit" class="w-3.5 h-3.5 text-slate-500"></i>
+            </div>
+          </div>
+
+          <!-- Quick Reset / Top Button -->
+          <button id="btn-scroll-top" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors" title="Scroll to Top">
+            <i data-lucide="arrow-up-to-line" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- MODAL: Ultimate Guitar Importer & Favorites Sync -->
+  <div id="ug-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full p-6 space-y-5 shadow-2xl relative max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="p-2 bg-amber-500/20 text-amber-400 rounded-xl">
+            <i data-lucide="cloud-download" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-slate-100">Ultimate Guitar Favorites Importer</h3>
+            <p class="text-xs text-slate-400">Sync with account: <span class="text-indigo-400 font-mono">rezavirtual@gmail.com</span></p>
+          </div>
+        </div>
+        <button id="btn-close-ug-modal" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Tabs inside modal -->
+      <div class="flex border-b border-slate-800 gap-4 text-xs font-semibold">
+        <button id="tab-btn-bookmarklet" class="pb-2 border-b-2 border-indigo-500 text-indigo-400">
+          Method 1: 1-Click Bookmarklet (Instant)
+        </button>
+        <button id="tab-btn-paste" class="pb-2 border-b-2 border-transparent text-slate-400 hover:text-slate-200">
+          Method 2: Paste Tab URL / JSON
+        </button>
+      </div>
+
+      <!-- Tab Content 1: Bookmarklet -->
+      <div id="tab-content-bookmarklet" class="space-y-4 text-xs text-slate-300 overflow-y-auto pr-1">
+        <div class="p-3 bg-slate-950/70 border border-slate-800 rounded-xl space-y-2">
+          <span class="font-semibold text-amber-400 flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> How to export all your Ultimate Guitar favorites:
+          </span>
+          <ol class="list-decimal list-inside space-y-1.5 text-slate-300">
+            <li>Log into your account at <a href="https://www.ultimate-guitar.com/user/mytabs" target="_blank" class="text-indigo-400 underline font-semibold">ultimate-guitar.com/user/mytabs</a>.</li>
+            <li>Press <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-200">F12</kbd> (or right click > <b>Inspect</b> > <b>Console</b>) on your browser.</li>
+            <li>Copy and paste the extractor code snippet below and press Enter.</li>
+            <li>It will automatically copy all your saved chords to your clipboard or download <code class="text-amber-300">ug_my_tabs.json</code>!</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-slate-400 font-medium">UG Extractor Console Code:</span>
+            <button id="btn-copy-extractor-code" class="px-2.5 py-1 bg-indigo-600 hover:bg-indigo-500 text-white rounded text-[11px] font-semibold flex items-center gap-1">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Script
+            </button>
+          </div>
+          <textarea id="extractor-code" readonly rows="4" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 font-mono text-[11px] text-slate-400 select-all"></textarea>
+        </div>
+
+        <!-- Drop file or paste JSON -->
+        <div class="border-2 border-dashed border-slate-700 rounded-xl p-4 text-center space-y-2 hover:border-indigo-500 transition-colors">
+          <i data-lucide="upload" class="w-6 h-6 mx-auto text-slate-500"></i>
+          <p class="text-xs text-slate-300">Have the downloaded <code class="text-indigo-400">ug_my_tabs.json</code> file?</p>
+          <label class="inline-block px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg cursor-pointer font-semibold text-xs transition-colors">
+            Browse JSON File
+            <input type="file" id="ug-file-input" accept=".json" class="hidden">
+          </label>
+        </div>
+      </div>
+
+      <!-- Tab Content 2: Paste URL or Raw Text -->
+      <div id="tab-content-paste" class="hidden space-y-3 text-xs overflow-y-auto pr-1">
+        <div>
+          <label class="block text-slate-400 font-medium mb-1">Ultimate Guitar Tab URL:</label>
+          <div class="flex gap-2">
+            <input id="ug-url-input" type="url" placeholder="https://tabs.ultimate-guitar.com/tab/..." class="flex-1 px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-slate-200 focus:outline-none focus:border-indigo-500">
+            <button id="btn-fetch-ug-url" class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-semibold">Fetch Tab</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-400 font-medium mb-1">Or paste Raw JSON / Chords:</label>
+          <textarea id="ug-raw-paste" rows="6" placeholder="Paste tab text or JSON here..." class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-slate-200 font-mono text-xs focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <button id="btn-import-raw-paste" class="w-full py-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-lg transition-colors">
+          Import Songs
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL: Add / Edit Song Tab -->
+  <div id="song-editor-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 space-y-4 shadow-2xl relative max-h-[92vh] flex flex-col">
+      <div class="flex items-center justify-between">
+        <h3 id="editor-modal-title" class="font-bold text-base text-slate-100">Add New Chord Tab</h3>
+        <button id="btn-close-editor-modal" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 flex-1 overflow-y-auto pr-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs text-slate-400 font-medium mb-1">Song Title *</label>
+            <input id="edit-title" type="text" placeholder="e.g. Hotel California" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs text-slate-400 font-medium mb-1">Artist *</label>
+            <input id="edit-artist" type="text" placeholder="e.g. Eagles" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-xs text-slate-400 font-medium mb-1">Key</label>
+            <input id="edit-key" type="text" placeholder="e.g. Am or D" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs text-slate-400 font-medium mb-1">Capo</label>
+            <input id="edit-capo" type="text" placeholder="e.g. 2nd fret" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs text-slate-400 font-medium mb-1">Auto-Scroll Speed</label>
+            <input id="edit-speed" type="number" min="5" max="150" value="30" class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs text-slate-400 font-medium mb-1">YouTube URL or Video ID</label>
+          <input id="edit-youtube" type="text" placeholder="https://www.youtube.com/watch?v=..." class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div>
+          <label class="block text-xs text-slate-400 font-medium mb-1">Chords & Lyrics Content *</label>
+          <textarea id="edit-content" rows="10" placeholder="[Intro]&#10;Am  Em  F  G&#10;&#10;[Verse 1]&#10;Am            Em&#10;On a dark desert highway&#10;F                 G&#10;Cool wind in my hair..." class="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg font-mono text-xs text-slate-200 focus:outline-none focus:border-indigo-500 leading-relaxed"></textarea>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+        <button id="btn-delete-song" class="hidden px-3 py-2 rounded-lg bg-red-600/20 hover:bg-red-600/30 text-red-400 text-xs font-semibold">Delete Tab</button>
+        <div class="flex gap-2 ml-auto">
+          <button id="btn-cancel-editor" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold">Cancel</button>
+          <button id="btn-save-song" class="px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md">Save Tab</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Chord Diagram Popup / Tooltip -->
+  <div id="chord-diagram-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl p-5 max-w-xs w-full shadow-2xl space-y-4 text-center">
+      <div class="flex items-center justify-between">
+        <h4 id="diagram-chord-name" class="text-xl font-black text-indigo-400 font-mono">Cmaj7</h4>
+        <button id="btn-close-chord-diagram" class="p-1 rounded-lg text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="diagram-svg-container" class="flex justify-center py-2">
+        <!-- SVG Guitar Fretboard rendered here -->
+      </div>
+      <p id="diagram-chord-fingers" class="text-xs text-slate-400">Finger positions: x 3 2 0 1 0</p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-slate-800/95 border border-slate-700 text-white px-4 py-2 rounded-full text-xs font-medium shadow-2xl flex items-center gap-2 pointer-events-none opacity-0 transition-opacity duration-300">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="chords-db.js"></script>
+  <script src="ug-importer.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

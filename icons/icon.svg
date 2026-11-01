@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <!-- Guitar Neck & Strings Icon -->
+  <g fill="#ffffff" transform="translate(100, 100) scale(0.61)">
+    <path d="M433.8 38.2c-35-35-91.8-35-126.8 0L241.6 103.5l167 167 65.2-65.4c35-35 35-91.8 0-126.9zM218.9 126.2L42.5 302.6c-4.9 4.9-7.8 11.4-8.1 18.3L32 464c-.8 8.8 6.4 16 15.2 15.2l143.1-2.4c6.9-.3 13.4-3.2 18.3-8.1l176.4-176.4-166.1-166.1z"/>
+  </g>
+</svg>
