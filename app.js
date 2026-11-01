@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v3_fix_sharps_2026';
+    const CURRENT_VERSION = 'v4_clean_sharps_2026';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
@@ -326,6 +326,17 @@ class AuraTabsApp {
   }
 
   bindEvents() {
+    // Sync / Refresh Library
+    this.btnSyncLibrary = document.getElementById('btn-sync-library');
+    if (this.btnSyncLibrary) {
+      this.btnSyncLibrary.addEventListener('click', () => {
+        localStorage.removeItem('auratabs_songs');
+        localStorage.removeItem('auratabs_version');
+        this.loadLibrary();
+        this.showToast('Library reloaded with latest chords!');
+      });
+    }
+
     // Theme Toggle
     this.btnThemeToggle = document.getElementById('btn-theme-toggle');
     if (this.btnThemeToggle) {

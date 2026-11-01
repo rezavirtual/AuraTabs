@@ -45,7 +45,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=4.0">
 </head>
 <body class="bg-slate-950 text-slate-100 h-full flex flex-col font-sans select-none antialiased overflow-hidden">
 
@@ -72,6 +72,9 @@
       <button id="btn-add-song" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition-all">
         <i data-lucide="plus" class="w-4 h-4"></i>
         <span>New Tab</span>
+      </button>
+      <button id="btn-sync-library" class="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Reload Fresh Chords">
+        <i data-lucide="refresh-cw" class="w-4 h-4"></i>
       </button>
       <button id="btn-theme-toggle" class="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors" title="Toggle Theme">
         <i data-lucide="sun" class="w-4 h-4"></i>
@@ -458,11 +461,11 @@
     <span id="toast-message">Notification</span>
   </div>
 
-  <!-- Application Scripts -->
-  <script src="chords-db.js"></script>
-  <script src="ug-importer.js"></script>
-  <script src="songs-data.js"></script>
-  <script src="app.js"></script>
+  <!-- Application Scripts with Cache Buster -->
+  <script src="chords-db.js?v=4.0"></script>
+  <script src="ug-importer.js?v=4.0"></script>
+  <script src="songs-data.js?v=4.0"></script>
+  <script src="app.js?v=4.0"></script>
 
   <script>
     // Initialize Lucide icons
