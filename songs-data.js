@@ -5,7 +5,7 @@
         "artist":  "Coldplay",
         "key":  "Bm",
         "capo":  "3 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -20,7 +20,7 @@
         "artist":  "Slam",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -35,7 +35,7 @@
         "artist":  "Shae",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -50,7 +50,7 @@
         "artist":  "Misc Traditional",
         "key":  "Db",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -65,7 +65,7 @@
         "artist":  "Charlie Puth",
         "key":  "Db",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -80,7 +80,7 @@
         "artist":  "Data (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -95,7 +95,7 @@
         "artist":  "Ed Sheeran",
         "key":  "E",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -110,7 +110,7 @@
         "artist":  "Search (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -125,7 +125,7 @@
         "artist":  "Ukays",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -140,7 +140,7 @@
         "artist":  "New Boyz",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -155,7 +155,7 @@
         "artist":  "Lela",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -170,7 +170,7 @@
         "artist":  "Fastball",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -185,7 +185,7 @@
         "artist":  "Mr. Big",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -200,7 +200,7 @@
         "artist":  "OneRepublic",
         "key":  "Am",
         "capo":  "4 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -215,7 +215,7 @@
         "artist":  "The Cranberries",
         "key":  "E",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -230,7 +230,7 @@
         "artist":  "The Cranberries",
         "key":  "Em",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "https://www.youtube.com/watch?v=4LmLEUEtMFc",
         "favorite":  true,
         "tags":  [
@@ -245,7 +245,7 @@
         "artist":  "Christina Perri",
         "key":  "Cm",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -260,7 +260,7 @@
         "artist":  "Camila Cabello",
         "key":  "Gm",
         "capo":  "3 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -275,7 +275,7 @@
         "artist":  "BumiPutra Rockers (BPR)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -290,7 +290,7 @@
         "artist":  "Rihanna",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "https://www.youtube.com/watch?v=rd-BY7TDw-k",
         "favorite":  true,
         "tags":  [
@@ -305,7 +305,7 @@
         "artist":  "Yazoo",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -320,7 +320,7 @@
         "artist":  "Elvis Presley",
         "key":  "D",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "https://www.youtube.com/watch?v=ipJtTQkYZZk",
         "favorite":  true,
         "tags":  [
@@ -335,7 +335,7 @@
         "artist":  "Justin Bieber",
         "key":  "E",
         "capo":  "4 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "https://www.youtube.com/watch?v=Gb50IDe1fRo",
         "favorite":  true,
         "tags":  [
@@ -350,7 +350,7 @@
         "artist":  "Beverley Craven",
         "key":  null,
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -365,7 +365,7 @@
         "artist":  "Ed Sheeran",
         "key":  "A",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "https://www.youtube.com/watch?v=vhSN7nAXc9A",
         "favorite":  true,
         "tags":  [
@@ -380,7 +380,7 @@
         "artist":  "Bon Jovi",
         "key":  "A",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -395,7 +395,7 @@
         "artist":  "Bon Jovi",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -410,7 +410,7 @@
         "artist":  "Sheila on 7",
         "key":  "Ab",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -425,7 +425,7 @@
         "artist":  "Blur",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -440,7 +440,7 @@
         "artist":  "Radiohead",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -455,7 +455,7 @@
         "artist":  "3 Doors Down",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -470,7 +470,7 @@
         "artist":  "Boyce Avenue",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -485,7 +485,7 @@
         "artist":  "Ed Sheeran",
         "key":  "Ab",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -500,7 +500,7 @@
         "artist":  "Nirvana",
         "key":  null,
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -515,7 +515,7 @@
         "artist":  "The White Stripes",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -530,7 +530,7 @@
         "artist":  "Green Day",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -545,7 +545,7 @@
         "artist":  "Sia",
         "key":  "F",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -560,7 +560,7 @@
         "artist":  "Opick",
         "key":  "Am",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -575,7 +575,7 @@
         "artist":  "Wings (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -590,7 +590,7 @@
         "artist":  "Sweet Charity",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -605,7 +605,7 @@
         "artist":  "Slam",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -620,7 +620,7 @@
         "artist":  "The Animals",
         "key":  "Am",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -635,7 +635,7 @@
         "artist":  "Goo Goo Dolls",
         "key":  "Bm",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -650,7 +650,7 @@
         "artist":  "Sheila on 7",
         "key":  "Am",
         "capo":  "3 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -665,7 +665,7 @@
         "artist":  "Bee Gees",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -680,7 +680,7 @@
         "artist":  "Creedence Clearwater Revival",
         "key":  "C",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -695,7 +695,7 @@
         "artist":  "Creedence Clearwater Revival",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -710,7 +710,7 @@
         "artist":  "Creedence Clearwater Revival",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -725,7 +725,7 @@
         "artist":  "Michael Learns to Rock",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -740,7 +740,7 @@
         "artist":  "Search (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -755,7 +755,7 @@
         "artist":  "Eric Clapton",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -770,7 +770,7 @@
         "artist":  "Search (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -785,7 +785,7 @@
         "artist":  "ST12",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -800,7 +800,7 @@
         "artist":  "Bachelor Girl",
         "key":  null,
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -815,7 +815,7 @@
         "artist":  "Lady Gaga",
         "key":  "C",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -830,7 +830,7 @@
         "artist":  "Hoobastank",
         "key":  "E",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -845,7 +845,7 @@
         "artist":  "Guns N\u0027 Roses",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -860,7 +860,7 @@
         "artist":  "Semisonic",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -875,7 +875,7 @@
         "artist":  "Guns N\u0027 Roses",
         "key":  "Db",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -890,7 +890,7 @@
         "artist":  "Joan Jett and The Blackhearts",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -905,7 +905,7 @@
         "artist":  "Beyoncé",
         "key":  "G",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -920,7 +920,7 @@
         "artist":  "Misc Soundtrack",
         "key":  "Em",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -935,7 +935,7 @@
         "artist":  "P!nk",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -950,7 +950,7 @@
         "artist":  "Fotograf",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -965,7 +965,7 @@
         "artist":  "Mega (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -980,7 +980,7 @@
         "artist":  "Misc Unsigned Bands",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -995,7 +995,7 @@
         "artist":  "Damasutra",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1010,7 +1010,7 @@
         "artist":  "Iklim",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1025,7 +1025,7 @@
         "artist":  "Iklim",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1040,7 +1040,7 @@
         "artist":  "Saleem (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1055,7 +1055,7 @@
         "artist":  "Projector Band",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1070,7 +1070,7 @@
         "artist":  "Jason Mraz",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1085,7 +1085,7 @@
         "artist":  "Roxette",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1100,7 +1100,7 @@
         "artist":  "Pretenders",
         "key":  "D",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1115,7 +1115,7 @@
         "artist":  "Dido",
         "key":  null,
         "capo":  "5 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1130,7 +1130,7 @@
         "artist":  "Ella",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1145,7 +1145,7 @@
         "artist":  "Lovehunters",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1160,7 +1160,7 @@
         "artist":  "Dido",
         "key":  "G#m",
         "capo":  "4 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1175,7 +1175,7 @@
         "artist":  "Keane",
         "key":  "A",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1190,7 +1190,7 @@
         "artist":  "Jason Mraz",
         "key":  "E",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1205,7 +1205,7 @@
         "artist":  "Michael Bublé",
         "key":  "Gb",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1220,7 +1220,7 @@
         "artist":  "Bic Runga",
         "key":  "E",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1235,7 +1235,7 @@
         "artist":  "Pulp",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1250,7 +1250,7 @@
         "artist":  "Doris Day",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1265,7 +1265,7 @@
         "artist":  "The Beatles",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1280,7 +1280,7 @@
         "artist":  "Simple Plan",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1295,7 +1295,7 @@
         "artist":  "John Denver",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1310,7 +1310,7 @@
         "artist":  "The Beatles",
         "key":  "F",
         "capo":  "5 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1325,7 +1325,7 @@
         "artist":  "Corinne Bailey Rae",
         "key":  "A",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1340,7 +1340,7 @@
         "artist":  "Demi Lovato",
         "key":  "G",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1355,7 +1355,7 @@
         "artist":  "The Everly Brothers",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1370,7 +1370,7 @@
         "artist":  "Adele",
         "key":  "A",
         "capo":  "2 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1385,7 +1385,7 @@
         "artist":  "Oasis",
         "key":  "C",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1400,7 +1400,7 @@
         "artist":  "The Cranberries",
         "key":  "Em",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1415,7 +1415,7 @@
         "artist":  "The Beatles",
         "key":  "F",
         "capo":  "3 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1430,7 +1430,7 @@
         "artist":  "Queen",
         "key":  "G",
         "capo":  "3 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1445,7 +1445,7 @@
         "artist":  "Bad Religion",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1460,7 +1460,7 @@
         "artist":  "Jimmy Palikat",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1475,7 +1475,7 @@
         "artist":  "Exist",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1490,7 +1490,7 @@
         "artist":  "Iklim",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1505,7 +1505,7 @@
         "artist":  "Exists",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1520,7 +1520,7 @@
         "artist":  "Exists",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1535,7 +1535,7 @@
         "artist":  "Ukays",
         "key":  "C",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1550,7 +1550,7 @@
         "artist":  "Screen",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1565,7 +1565,7 @@
         "artist":  "Lestari",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1580,7 +1580,7 @@
         "artist":  "Spring (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1595,7 +1595,7 @@
         "artist":  "XPDC",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1610,7 +1610,7 @@
         "artist":  "Wings (Malaysia)",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1625,7 +1625,7 @@
         "artist":  "Lewis Capaldi",
         "key":  "C#",
         "capo":  "1 fret",
-        "speed":  30,
+        "speed": 15,
         "youtube":  "https://www.youtube.com/watch?v=jLcrmEcDNOI",
         "favorite":  true,
         "tags":  [
@@ -1640,7 +1640,7 @@
         "artist":  "Red Hot Chili Peppers",
         "key":  "E",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1655,7 +1655,7 @@
         "artist":  "Floor 88",
         "key":  "C",
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1670,7 +1670,7 @@
         "artist":  "Didi Kempot",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1685,7 +1685,7 @@
         "artist":  "Sweet Charity",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1700,7 +1700,7 @@
         "artist":  "Exist",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1715,7 +1715,7 @@
         "artist":  "Ella",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1730,7 +1730,7 @@
         "artist":  "P. Ramlee",
         "key":  null,
         "capo":  null,
-        "speed":  30,
+        "speed": 15,
         "youtube":  "",
         "favorite":  true,
         "tags":  [
@@ -1740,3 +1740,4 @@
         "content":  "LAGU: MALAM BULAN DIPAGAR BINTANG\r\nARTIST : P. RAMLEE\r\n\r\n[Intro]\r\nC Em Dm F G\r\n \r\n[Verse 1]\r\nC\r\nMalam bulan dipagar bintang\r\n                  G\r\nMakin indah jika dipandang\r\nG\r\nBagai gadis beri senyuman\r\n              C\r\nPada bujang idaman\r\nC\r\nDuhai kasih ingin dimanja\r\nA             Dm\r\nDengan cumbuan mesra\r\nF              C\r\nUntuk pelipur lara\r\nDm       G       C\r\nPenawar dik asmara\r\n \r\nMmm... mmm... \r\n\r\nC\r\nMalam bulan dipagar bintang\r\n                  G\r\nMakin indah jika dipandang\r\nG\r\nBagai gadis beri senyuman\r\n              C\r\nPada bujang idaman\r\nC\r\nDuhai kasih ingin dimanja\r\nA             Dm\r\nDengan cumbuan mesra\r\nF              C\r\nUntuk pelipur lara\r\nDm       G       C\r\nPenawar dik asmara\r\n\r\n[Verse 2]\r\nC\r\nMalam bulan dipagar bintang\r\n                 G\r\nTambah seri cuaca malam\r\nG\r\nMurni sungguh ciptaan Tuhan\r\n                    C\r\nBulan bintang lampu alam\r\nC\r\nAndai kata bintang menyepi\r\nA         Dm\r\nBulan tidak berseri\r\nF                C\r\nMalam menjadi sunyi\r\nDm          G    C\r\nTidak berseri lagi"
     }
 ];
+

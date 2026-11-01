@@ -173,7 +173,7 @@ class AuraTabsApp {
 
     // Auto-scroll variables
     this.isScrolling = false;
-    this.scrollSpeed = 30; // px per second
+    this.scrollSpeed = 15; // px per second (default 25% of new 60px/s max)
     this.scrollAnimId = null;
     this.lastScrollTime = null;
     this.wakeLock = null;
@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v4_clean_sharps_2026';
+    const CURRENT_VERSION = 'v5_speed_adjustment_2026';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
@@ -440,9 +440,9 @@ class AuraTabsApp {
       this.setScrollSpeed(parseInt(e.target.value, 10));
     });
 
-    this.btnSpeedSlow.addEventListener('click', () => this.setScrollSpeed(18));
-    this.btnSpeedMed.addEventListener('click', () => this.setScrollSpeed(35));
-    this.btnSpeedFast.addEventListener('click', () => this.setScrollSpeed(60));
+    this.btnSpeedSlow.addEventListener('click', () => this.setScrollSpeed(8));
+    this.btnSpeedMed.addEventListener('click', () => this.setScrollSpeed(15));
+    this.btnSpeedFast.addEventListener('click', () => this.setScrollSpeed(30));
 
     this.btnScrollTop.addEventListener('click', () => {
       this.stopAutoScroll();
@@ -636,7 +636,7 @@ class AuraTabsApp {
     this.currentSong = song;
     this.transposeSemitones = 0;
     this.transposeVal.textContent = '0';
-    this.scrollSpeed = song.speed || 30;
+    this.scrollSpeed = (song.speed && song.speed <= 60) ? song.speed : 15;
     this.speedSlider.value = this.scrollSpeed;
     this.speedIndicator.textContent = this.scrollSpeed;
 
@@ -958,7 +958,7 @@ class AuraTabsApp {
     this.editArtist.value = songToEdit ? songToEdit.artist : '';
     this.editKey.value = songToEdit ? (songToEdit.key || '') : '';
     this.editCapo.value = songToEdit ? (songToEdit.capo || '') : '';
-    this.editSpeed.value = songToEdit ? (songToEdit.speed || 30) : 30;
+    this.editSpeed.value = songToEdit ? (songToEdit.speed || 15) : 15;
     this.editYoutube.value = songToEdit ? (songToEdit.youtube || '') : '';
     this.editContent.value = songToEdit ? (songToEdit.content || '') : '';
 
