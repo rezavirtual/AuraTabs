@@ -6,7 +6,7 @@
         "key":  "Bm",
         "capo":  "3 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=RB-RcX5DS5A",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -21,7 +21,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=l8NHjp9x1jk",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -36,7 +36,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Y7aMo1NE4A0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -51,7 +51,7 @@
         "key":  "Db",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=qCJSNMqub8g",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -66,7 +66,7 @@
         "key":  "Db",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=3lcSFAItC4E",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -81,7 +81,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=nmajzcT-cIY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -96,7 +96,7 @@
         "key":  "E",
         "capo":  "2 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=KKQl-pIRQMY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -111,7 +111,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=x1kQP22lJJ8",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -141,7 +141,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=VOPuu_4rhxs",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -156,7 +156,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=UiJSMoopsxA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -171,7 +171,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=aBFrSi5moK4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -186,7 +186,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Za9LY6Q3EuI",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -201,7 +201,7 @@
         "key":  "Am",
         "capo":  "4 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=hT_nvWreIhg",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -216,7 +216,7 @@
         "key":  "E",
         "capo":  "2 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Yam5uK6e-bQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -246,7 +246,7 @@
         "key":  "Cm",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=HH7WXlf9WLk",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -261,7 +261,7 @@
         "key":  "Gm",
         "capo":  "3 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=HCjNJDNzw8Y",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -276,7 +276,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=dmCED70VHaA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -306,7 +306,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=D7OVZ-CgMwM",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -351,7 +351,7 @@
         "key":  null,
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=EmTBKbyaEjU",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -381,7 +381,7 @@
         "key":  "A",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=dnUj9I41AdA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -396,7 +396,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=CuUefy9bT9U",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -411,7 +411,7 @@
         "key":  "Ab",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=IWvo2fld3s4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -426,7 +426,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Bz4l9_bzfZM",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -441,7 +441,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=XFkzRNyygfk",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -456,7 +456,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=kPBzTxZQG5Q",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -471,7 +471,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=RxWEvV9zYj4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -486,7 +486,7 @@
         "key":  "Ab",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -501,7 +501,7 @@
         "key":  null,
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=XwcpiYqmEWc",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -516,7 +516,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=0J2QdDbelmY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -531,7 +531,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=uB_EwbbBkZQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -546,7 +546,7 @@
         "key":  "F",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=73aASJI35iY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -561,7 +561,7 @@
         "key":  "Am",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=OUDB9-JkJio",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -576,7 +576,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=mmzf6NoMzNU",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -591,7 +591,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=tcnT56TRkB0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -606,7 +606,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=is4OPh1_rOs",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -621,7 +621,7 @@
         "key":  "Am",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=PqW4GCmQSt4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -636,7 +636,7 @@
         "key":  "Bm",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=CUbJQGqFoi0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -651,7 +651,7 @@
         "key":  "Am",
         "capo":  "3 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=dSR5dyHPUxA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -666,7 +666,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=elnUkp1fRuU",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -681,7 +681,7 @@
         "key":  "C",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=bO28lB1uwp4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -696,7 +696,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=T9MXNbpXQ3g",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -711,7 +711,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=BrB3gaX3-gI",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -726,7 +726,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=88sUPTJE-2g",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -741,7 +741,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=TgstEDxAO9o",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -756,7 +756,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Pu5c4aEg3NM",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -771,7 +771,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=HBA7PO-7yHk",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -786,7 +786,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Ssb3hNe0beA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -801,7 +801,7 @@
         "key":  null,
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=S9imCA9Wwks",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -816,7 +816,7 @@
         "key":  "C",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=WYRJ-ryPEu0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -831,7 +831,7 @@
         "key":  "E",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=KdkifgRwI8A",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -846,7 +846,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=k04tX2fvh0o",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -861,7 +861,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=970Lq2M_ld0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -876,7 +876,7 @@
         "key":  "Db",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=-DPomaw9Sl0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -891,7 +891,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=cXFra7gjElw",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -906,7 +906,7 @@
         "key":  "G",
         "capo":  "2 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=bnVUHWCynig",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -921,7 +921,7 @@
         "key":  "Em",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=bo_efYhYU2A",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -936,7 +936,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=OpQFFLBMEPI",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -951,7 +951,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=4DjCkEWZ2Qc",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -966,7 +966,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=beqnPTfaKqo",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -981,7 +981,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=VvyeZbmSJfE",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -996,7 +996,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=OIdS250fy_I",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1011,7 +1011,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=fns4cDBAAeU",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1026,7 +1026,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=KRjdE7YXeI4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1041,7 +1041,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=rvk15zCIB_4",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1056,7 +1056,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=PhGCxbfNNj8",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1071,7 +1071,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=acvIVA9-FMQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1086,7 +1086,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=OsyM_peiSTg",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1101,7 +1101,7 @@
         "key":  "D",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=MFbNgNYxGnw",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1116,7 +1116,7 @@
         "key":  null,
         "capo":  "5 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=jRqhGC5vgC0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1131,7 +1131,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=Dh_5U-QcWnw",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1146,7 +1146,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=AnmN92MFDqo",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1161,7 +1161,7 @@
         "key":  "G#m",
         "capo":  "4 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=ZlKsb6iZ-bY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1176,7 +1176,7 @@
         "key":  "A",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=xFGE8BuOn0g",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1191,7 +1191,7 @@
         "key":  "E",
         "capo":  "2 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=BFkTu8Y1KLs",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1206,7 +1206,7 @@
         "key":  "Gb",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=weQyaapaB2s",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1221,7 +1221,7 @@
         "key":  "E",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=RKPuk8YLVVQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1236,7 +1236,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=TZOdKdxP8Wk",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1251,7 +1251,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=tV0CegHzums",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1266,7 +1266,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=v1HDt1tknTc",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1281,7 +1281,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=ZQ7oqmikZDQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1296,7 +1296,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=SneCkM0bJq0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1311,7 +1311,7 @@
         "key":  "F",
         "capo":  "5 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=NrgmdOz227I",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1326,7 +1326,7 @@
         "key":  "A",
         "capo":  "2 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=rjOhZZyn30k",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1341,7 +1341,7 @@
         "key":  "G",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=kHue-HaXXzg",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1356,7 +1356,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=tbU3zdAgiX8",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1371,7 +1371,7 @@
         "key":  "A",
         "capo":  "2 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=22c3_LoIfZQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1386,7 +1386,7 @@
         "key":  "C",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=oplra1FJxWI",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1401,7 +1401,7 @@
         "key":  "Em",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=6Ejga4kJUts",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1416,7 +1416,7 @@
         "key":  "F",
         "capo":  "3 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=A_MjCqQoLLA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1431,7 +1431,7 @@
         "key":  "G",
         "capo":  "3 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1446,7 +1446,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=zTfdILFoBTU",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1461,7 +1461,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=7rvYOXNnHGA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1476,7 +1476,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=IPJA56hD71s",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1491,7 +1491,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=hL6gbIFunoM",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1506,7 +1506,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=liLiCeWT6RU",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1521,7 +1521,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=-v68jsPeGWA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1536,7 +1536,7 @@
         "key":  "C",
         "capo":  "1 fret",
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=6BwakuNU3fQ",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1551,7 +1551,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=lm0oJknEIf0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1566,7 +1566,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=cRbryLkhQhY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1581,7 +1581,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=4n0IUf15go0",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1596,7 +1596,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=lOrWlDkyLXc",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1611,7 +1611,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=GNqqsguF63s",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1641,7 +1641,7 @@
         "key":  "E",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=N7ZyzCNeFKY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1656,7 +1656,7 @@
         "key":  "C",
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=3zCro_Z4wFo",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1671,7 +1671,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=TAR2cP--0jI",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1686,7 +1686,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=H7xLdkWaMSA",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1701,7 +1701,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=1WMa40d1vEw",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1716,7 +1716,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=wsZWIJLJ0PY",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",
@@ -1731,7 +1731,7 @@
         "key":  null,
         "capo":  null,
         "speed":  3,
-        "youtube":  "",
+        "youtube":  "https://www.youtube.com/watch?v=m7pDnJzOtpI",
         "favorite":  true,
         "tags":  [
                      "Ultimate Guitar",

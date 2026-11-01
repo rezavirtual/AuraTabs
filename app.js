@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v7_clean_intros_2026';
+    const CURRENT_VERSION = 'v8_auto_youtube_2026';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
@@ -899,24 +899,38 @@ class AuraTabsApp {
 
   loadYouTubeVideo(urlOrId) {
     this.youtubeUrlInput.value = urlOrId || '';
-
-    if (!urlOrId) {
-      // Default to YouTube Search URL
-      const query = encodeURIComponent(`${this.currentSong.title} ${this.currentSong.artist} guitar chords`);
-      const searchUrl = `https://www.youtube.com/results?search_query=${query}`;
-      this.youtubeExternalLink.href = searchUrl;
-      this.youtubeIframe.src = '';
-      return;
-    }
+    const btnYt = this.btnToggleYouTube;
+    const iframeWrapper = document.getElementById('youtube-iframe-wrapper');
 
     const videoId = this.extractYouTubeId(urlOrId);
+
     if (videoId) {
       this.youtubeIframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1`;
       this.youtubeExternalLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+      this.youtubeExternalLink.innerHTML = `Open in YouTube <i data-lucide="external-link" class="w-3 h-3"></i>`;
+      this.youtubeExternalLink.classList.remove('opacity-50', 'pointer-events-none');
+      if (iframeWrapper) iframeWrapper.classList.remove('hidden');
+
+      // YouTube button active style
+      btnYt.innerHTML = `<i data-lucide="youtube" class="w-4 h-4 text-red-500"></i> <span class="hidden sm:inline">YouTube</span>`;
+      btnYt.className = 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-red-600/10 hover:bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-semibold transition-all';
+      btnYt.title = 'Watch / Listen on YouTube';
     } else {
+      // Cannot Find state
       this.youtubeIframe.src = '';
-      this.youtubeExternalLink.href = urlOrId;
+      this.youtubeExternalLink.href = '#';
+      this.youtubeExternalLink.innerHTML = `<span class="text-amber-400 font-semibold">Cannot Find</span>`;
+      this.youtubeExternalLink.classList.add('opacity-50', 'pointer-events-none');
+      if (iframeWrapper) iframeWrapper.classList.add('hidden');
+
+      // YouTube button "Cannot Find" style
+      btnYt.innerHTML = `<i data-lucide="youtube" class="w-4 h-4 text-slate-500"></i> <span class="text-xs text-amber-400 font-medium">Cannot Find</span>`;
+      btnYt.className = 'flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 border border-slate-700 text-xs font-medium transition-all';
+      btnYt.title = 'Cannot Find video on YouTube';
     }
+
+    lucide.createIcons({ root: btnYt });
+    lucide.createIcons({ root: this.youtubeDrawer });
   }
 
   extractYouTubeId(url) {
