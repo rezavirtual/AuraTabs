@@ -5,6 +5,18 @@
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+html, body {
+  height: 100%;
+  height: -webkit-fill-available;
+  overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+#chord-sheet-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: auto !important; /* smooth behavior interferes with frame-by-frame auto-scrolling */
+}
+
 .safe-top {
   padding-top: max(0.75rem, var(--safe-top));
 }

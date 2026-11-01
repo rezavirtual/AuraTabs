@@ -402,7 +402,12 @@ class AuraTabsApp {
     });
 
     // Auto-Scroll Controls
-    this.btnToggleScroll.addEventListener('click', () => this.toggleAutoScroll());
+    const handleScrollToggle = (e) => {
+      if (e) e.preventDefault();
+      this.toggleAutoScroll();
+    };
+    this.btnToggleScroll.addEventListener('click', handleScrollToggle);
+    this.btnToggleScroll.addEventListener('touchend', handleScrollToggle);
     
     // Tap anywhere on chord container to pause if currently scrolling
     this.chordContainer.addEventListener('click', (e) => {
@@ -800,6 +805,7 @@ class AuraTabsApp {
     this.scrollStateBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Scrolling`;
     this.scrollStateBadge.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-300';
 
+    this.currentScrollPos = this.chordContainer.scrollTop;
     this.lastScrollTime = performance.now();
     this.scrollAnimId = requestAnimationFrame(this.scrollStep.bind(this));
     this.requestWakeLock();
@@ -823,18 +829,28 @@ class AuraTabsApp {
   scrollStep(currentTime) {
     if (!this.isScrolling) return;
 
-    const delta = (currentTime - this.lastScrollTime) / 1000;
+    if (!this.lastScrollTime) {
+      this.lastScrollTime = currentTime;
+    }
+
+    const delta = Math.min(0.1, (currentTime - this.lastScrollTime) / 1000);
     this.lastScrollTime = currentTime;
 
     // Calculate distance to scroll based on speed (pixels per second)
     const pxToScroll = this.scrollSpeed * delta;
-    this.chordContainer.scrollTop += pxToScroll;
+    
+    // Maintain fractional position to avoid iOS Safari integer rounding bug
+    if (isNaN(this.currentScrollPos) || Math.abs(this.currentScrollPos - this.chordContainer.scrollTop) > 10) {
+      this.currentScrollPos = this.chordContainer.scrollTop;
+    }
+    this.currentScrollPos += pxToScroll;
+    this.chordContainer.scrollTop = this.currentScrollPos;
 
     this.updateScrollProgress();
 
     // Check if reached bottom
     const maxScroll = this.chordContainer.scrollHeight - this.chordContainer.clientHeight;
-    if (this.chordContainer.scrollTop >= maxScroll - 5) {
+    if (maxScroll > 15 && this.chordContainer.scrollTop >= maxScroll - 4) {
       this.stopAutoScroll();
       this.showToast('Reached end of song 🎵');
       return;
