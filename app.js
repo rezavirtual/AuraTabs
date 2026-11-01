@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v2_full_ug_chords_2026';
+    const CURRENT_VERSION = 'v3_fix_sharps_2026';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
@@ -737,7 +737,7 @@ class AuraTabsApp {
     if (tokens.length === 0) return false;
 
     // Pattern for standard guitar chord notation
-    const chordRegex = /^[A-G][#b]?(m|maj|min|dim|aug|sus|add)?[0-9]?((\/|-)[A-G][#b]?)?$/;
+    const chordRegex = /^[A-G][#b]?(m|maj|min|dim|aug|sus|add|M)?[0-9]?((\/|-)[A-G][#b]?)?$/;
     let chordCount = 0;
 
     for (const token of tokens) {
@@ -746,12 +746,13 @@ class AuraTabsApp {
       }
     }
 
-    // If at least 50% of words are chords or contains 2+ valid chords
-    return chordCount >= 2 || (chordCount / tokens.length) >= 0.5;
+    // If at least 50% of words are chords or contains 1+ valid chords
+    return (chordCount >= 1 && (chordCount / tokens.length) >= 0.5) || chordCount >= 2;
   }
 
   formatChordLine(line) {
-    const chordRegex = /\b([A-G][#b]?(?:m|maj|min|dim|aug|sus|add)?[0-9]?(?:[\/-][A-G][#b]?)?)\b/g;
+    // Regex that accurately matches sharps (#) and flats (b) without splitting at word boundary \b
+    const chordRegex = /\b([A-G][#b]?(?:m|maj|min|dim|aug|sus|add|M)?[0-9]?(?:[\/-][A-G][#b]?)?)(?!\w|[#b])/g;
     
     return line.replace(chordRegex, (match) => {
       const transposed = window.AuraChords.transposeChord(match, this.transposeSemitones);
