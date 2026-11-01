@@ -290,7 +290,7 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const CURRENT_VERSION = 'v8_auto_youtube_2026';
+    const CURRENT_VERSION = 'v9_premium_youtube_2026';
     const savedVer = localStorage.getItem('auratabs_version');
 
     if (savedVer !== CURRENT_VERSION) {
@@ -905,9 +905,9 @@ class AuraTabsApp {
     const videoId = this.extractYouTubeId(urlOrId);
 
     if (videoId) {
-      this.youtubeIframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1`;
+      this.youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
       this.youtubeExternalLink.href = `https://www.youtube.com/watch?v=${videoId}`;
-      this.youtubeExternalLink.innerHTML = `Open in YouTube <i data-lucide="external-link" class="w-3 h-3"></i>`;
+      this.youtubeExternalLink.innerHTML = `<i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Open in App / Premium PiP <i data-lucide="external-link" class="w-3 h-3"></i>`;
       this.youtubeExternalLink.classList.remove('opacity-50', 'pointer-events-none');
       if (iframeWrapper) iframeWrapper.classList.remove('hidden');
 
