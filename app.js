@@ -290,23 +290,26 @@ class AuraTabsApp {
 
   loadLibrary() {
     const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
-    const saved = localStorage.getItem('auratabs_songs');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        if (parsed.length <= 4 && defaultList.length > 4) {
-          // Upgrade to the 116 Ultimate Guitar favorites list
-          this.songs = [...defaultList];
-          this.saveLibrary();
-        } else {
-          this.songs = parsed;
-        }
-      } catch (e) {
-        this.songs = [...defaultList];
-      }
-    } else {
+    const CURRENT_VERSION = 'v2_full_ug_chords_2026';
+    const savedVer = localStorage.getItem('auratabs_version');
+
+    if (savedVer !== CURRENT_VERSION) {
+      // Force upgrade to the 100% original full Ultimate Guitar chords
       this.songs = [...defaultList];
+      localStorage.setItem('auratabs_version', CURRENT_VERSION);
       this.saveLibrary();
+    } else {
+      const saved = localStorage.getItem('auratabs_songs');
+      if (saved) {
+        try {
+          this.songs = JSON.parse(saved);
+        } catch (e) {
+          this.songs = [...defaultList];
+        }
+      } else {
+        this.songs = [...defaultList];
+        this.saveLibrary();
+      }
     }
     this.renderSongsList();
     this.updateCounters();
