@@ -289,15 +289,23 @@ class AuraTabsApp {
   }
 
   loadLibrary() {
+    const defaultList = window.UG_DEFAULT_SONGS || DEFAULT_SONGS;
     const saved = localStorage.getItem('auratabs_songs');
     if (saved) {
       try {
-        this.songs = JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (parsed.length <= 4 && defaultList.length > 4) {
+          // Upgrade to the 116 Ultimate Guitar favorites list
+          this.songs = [...defaultList];
+          this.saveLibrary();
+        } else {
+          this.songs = parsed;
+        }
       } catch (e) {
-        this.songs = [...DEFAULT_SONGS];
+        this.songs = [...defaultList];
       }
     } else {
-      this.songs = [...DEFAULT_SONGS];
+      this.songs = [...defaultList];
       this.saveLibrary();
     }
     this.renderSongsList();
